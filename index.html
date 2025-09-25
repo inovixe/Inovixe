@@ -11,13 +11,13 @@
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
         body {
             font-family: 'Inter', sans-serif;
-            background: linear-gradient(to bottom, #ffffff, #e6f7ff); /* Degradado de blanco a azul claro */
-            color: #000;
+            background-color: #000;
+            color: #fff;
             overflow-x: hidden;
             position: relative;
         }
         .bg-pattern {
-            background-image: radial-gradient(circle, #f0f0f0 1px, transparent 1px);
+            background-image: radial-gradient(circle, #0a0a0a 1px, transparent 1px);
             background-size: 20px 20px;
         }
         .text-inovixe-blue {
@@ -52,13 +52,13 @@
             font-size: 2.5rem;
             font-weight: 800;
             position: relative;
-            background: -webkit-linear-gradient(45deg, #000, #2b6cb0);
+            background: -webkit-linear-gradient(45deg, #fff, #2b6cb0);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
         .card {
-            border: 1px solid rgba(0, 0, 0, 0.1);
-            background: rgba(255, 255, 255, 0.8);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            background: rgba(255, 255, 255, 0.05);
             backdrop-filter: blur(10px);
             transition: transform 0.3s, box-shadow 0.3s;
         }
@@ -86,7 +86,7 @@
             left: -50%;
             width: 200%;
             height: 200%;
-            background: radial-gradient(circle, rgba(43, 108, 176, 0.1) 0%, rgba(43, 108, 176, 0) 70%);
+            background: radial-gradient(circle, rgba(43, 108, 176, 0.2) 0%, rgba(43, 108, 176, 0) 70%);
             animation: pulse-glow 5s infinite cubic-bezier(0.4, 0, 0.2, 1);
         }
         @keyframes pulse-glow {
@@ -95,10 +95,10 @@
             100% { transform: scale(2); opacity: 0; }
         }
         .modal-overlay {
-            background: rgba(255, 255, 255, 0.8);
+            background: rgba(0, 0, 0, 0.8);
         }
         .modal-content {
-            background: #eee;
+            background: #111;
         }
         #mobile-menu {
             transition: transform 0.3s ease-in-out;
@@ -118,7 +118,7 @@
         .hamburger-icon div {
             width: 24px;
             height: 3px;
-            background-color: #000;
+            background-color: #fff;
             border-radius: 9999px;
             transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
         }
@@ -141,17 +141,17 @@
             z-index: -1;
         }
         .bg-black-transparent {
-            background-color: rgba(255, 255, 255, 0.7);
+            background-color: rgba(0, 0, 0, 0.7);
         }
     </style>
 </head>
-<body class="text-black leading-relaxed overflow-x-hidden">
+<body class="bg-black text-white leading-relaxed overflow-x-hidden">
 
     <!-- Fondo de partículas -->
     <div id="particles-js"></div>
 
     <!-- Header y Navegación -->
-    <header class="bg-white bg-opacity-80 backdrop-blur-sm fixed top-0 left-0 w-full z-50 transition-all duration-300">
+    <header class="bg-black bg-opacity-80 backdrop-blur-sm fixed top-0 left-0 w-full z-50 transition-all duration-300">
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
             <div class="flex items-center">
                 <a href="#inicio" class="flex items-center">
@@ -159,11 +159,11 @@
                 </a>
             </div>
             <div class="hidden lg:flex items-center space-x-8">
-                <a href="#inicio" class="nav-link text-gray-700 hover:text-inovixe-blue transition-colors">Inicio</a>
-                <a href="#servicios" class="nav-link text-gray-700 hover:text-inovixe-blue transition-colors">Servicios</a>
-                <a href="#sobre-nosotros" class="nav-link text-gray-700 hover:text-inovixe-blue transition-colors">Sobre Nosotros</a>
-                <a href="#testimonios" class="nav-link text-gray-700 hover:text-inovixe-blue transition-colors">Testimonios</a>
-                <a href="#faq" class="nav-link text-gray-700 hover:text-inovixe-blue transition-colors">FAQ</a>
+                <a href="#inicio" class="nav-link text-gray-300 hover:text-inovixe-blue transition-colors">Inicio</a>
+                <a href="#servicios" class="nav-link text-gray-300 hover:text-inovixe-blue transition-colors">Servicios</a>
+                <a href="#sobre-nosotros" class="nav-link text-gray-300 hover:text-inovixe-blue transition-colors">Sobre Nosotros</a>
+                <a href="#testimonios" class="nav-link text-gray-300 hover:text-inovixe-blue transition-colors">Testimonios</a>
+                <a href="#faq" class="nav-link text-gray-300 hover:text-inovixe-blue transition-colors">FAQ</a>
                 <a href="#contacto" class="btn-cta bg-inovixe-blue text-white hover:bg-inovixe-blue/90 transition-colors">Consulta Gratuita</a>
             </div>
             <div class="lg:hidden">
@@ -177,12 +177,12 @@
     </header>
 
     <!-- Menú móvil (desplegable) -->
-    <div id="mobile-menu" class="fixed top-0 right-0 h-full w-2/3 bg-white/90 z-40 flex flex-col items-center pt-24 space-y-6 lg:hidden">
-        <a href="#inicio" class="nav-link text-black text-lg hover:text-inovixe-blue" onclick="closeMenu()">Inicio</a>
-        <a href="#servicios" class="nav-link text-black text-lg hover:text-inovixe-blue" onclick="closeMenu()">Servicios</a>
-        <a href="#sobre-nosotros" class="nav-link text-black text-lg hover:text-inovixe-blue" onclick="closeMenu()">Sobre Nosotros</a>
-        <a href="#testimonios" class="nav-link text-black text-lg hover:text-inovixe-blue" onclick="closeMenu()">Testimonios</a>
-        <a href="#faq" class="nav-link text-black text-lg hover:text-inovixe-blue" onclick="closeMenu()">FAQ</a>
+    <div id="mobile-menu" class="fixed top-0 right-0 h-full w-2/3 bg-black/90 z-40 flex flex-col items-center pt-24 space-y-6 lg:hidden">
+        <a href="#inicio" class="nav-link text-white text-lg hover:text-inovixe-blue" onclick="closeMenu()">Inicio</a>
+        <a href="#servicios" class="nav-link text-white text-lg hover:text-inovixe-blue" onclick="closeMenu()">Servicios</a>
+        <a href="#sobre-nosotros" class="nav-link text-white text-lg hover:text-inovixe-blue" onclick="closeMenu()">Sobre Nosotros</a>
+        <a href="#testimonios" class="nav-link text-white text-lg hover:text-inovixe-blue" onclick="closeMenu()">Testimonios</a>
+        <a href="#faq" class="nav-link text-white text-lg hover:text-inovixe-blue" onclick="closeMenu()">FAQ</a>
         <a href="#contacto" class="btn-cta bg-inovixe-blue text-white hover:bg-inovixe-blue/90 mt-8" onclick="closeMenu()">Consulta Gratuita</a>
     </div>
 
@@ -193,10 +193,10 @@
         <section id="inicio" class="relative overflow-hidden pt-12 lg:pt-24 text-center bg-black-transparent">
             <div class="container mx-auto px-6 py-12 lg:py-24">
                 <div class="max-w-4xl mx-auto">
-                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-black leading-tight fade-in-up">
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight fade-in-up">
                         Transformamos tu empresa con <span class="text-inovixe-blue">Inteligencia Artificial</span> y Marketing Innovador
                     </h1>
-                    <p class="mt-6 text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto fade-in-up" style="transition-delay: 0.2s;">
+                    <p class="mt-6 text-lg sm:text-xl text-gray-400 max-w-2xl mx-auto fade-in-up" style="transition-delay: 0.2s;">
                         La clave del éxito radica en combinar IA con marketing para optimizar operaciones, atraer leads cualificados y multiplicar ingresos de forma sostenible.
                     <div class="mt-12 fade-in-up" style="transition-delay: 0.4s;">
                         <a href="#contacto" class="btn-cta bg-inovixe-blue text-white text-lg hover:bg-inovixe-blue/90">Solicita una Consulta Gratuita</a>
@@ -210,13 +210,23 @@
             <div class="container mx-auto px-6">
                 <h2 class="section-title text-center mb-12 fade-in-up">Sobre Nosotros</h2>
                 <div class="text-center max-w-4xl mx-auto fade-in-up">
-                    <p class="text-lg text-gray-700 mb-6">
+                    <p class="text-lg text-gray-300 mb-6">
                         Inóvixe es una agencia especializada en la intersección de la <strong>Inteligencia Artificial</strong> y el <strong>Marketing Digital</strong>. Nuestra misión es clara: crear valor tangible para nuestros clientes a través de soluciones tecnológicas que optimizan procesos, atraen clientes de calidad y escalan las ventas de manera predecible.
                     </p>
-                    <p class="text-gray-600 mb-6">
+                    <p class="text-gray-400 mb-6">
                         Nuestro equipo está formado por expertos en IA, marketing, y desarrollo de negocio. Nos apasiona construir agentes autónomos para WhatsApp y voz, diseñar campañas de publicidad online altamente efectivas y crear funnels de venta que realmente funcionan.
                     </p>
                     <img src="https://placehold.co/600x400/2b6cb0/ffffff?text=Equipo+Inóvixe" alt="Foto del equipo Inóvixe" class="rounded-xl shadow-2xl mt-8 mb-6 mx-auto border border-inovixe-blue">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
+                        <div>
+                            <p class="font-bold text-inovixe-blue">Misión:</p>
+                            <p class="text-gray-400">Ser el socio estratégico que ayuda a las empresas a navegar la era digital, utilizando la IA como principal motor de crecimiento.</p>
+                        </div>
+                        <div>
+                            <p class="font-bold text-inovixe-blue">Visión:</p>
+                            <p class="text-gray-400">Crear un ecosistema de negocios rentables y automatizados en todo el mundo.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -230,31 +240,31 @@
                     <div class="card p-8 rounded-2xl flex flex-col items-center transition-transform hover:scale-105 fade-in-up">
                         <svg class="w-16 h-16 text-inovixe-blue mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182m0-4.991v4.99"></path></svg>
                         <h3 class="font-bold text-xl mb-2">Automatizaciones de procesos</h3>
-                        <p class="text-gray-600 text-center">Mejoramos la eficiencia operativa con IA para minimizar gastos y acelerar tareas diarias.</p>
+                        <p class="text-gray-400 text-center">Mejoramos la eficiencia operativa con IA para minimizar gastos y acelerar tareas diarias.</p>
                     </div>
                     <!-- Servicio 2 -->
                     <div class="card p-8 rounded-2xl flex flex-col items-center transition-transform hover:scale-105 fade-in-up" style="transition-delay: 0.1s;">
                         <svg class="w-16 h-16 text-inovixe-blue mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.25 12.76c0 1.6 1.123 2.994 2.707 3.227 1.068.157 2.148.279 3.238.364.466.037 .893 .281 1.153.671L12 21l4.108-3.978c.26-.39.687-.634 1.153-.671 1.09-.085 2.17-.207 3.238-.364 1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z"></path></svg>
                         <h3 class="font-bold text-xl mb-2">Agentes de inteligencia artificial WhatsApp, redes sociales y llamadas</h3>
-                        <p class="text-gray-600 text-center">Sistemas inteligentes que ofrecen soporte continuo y mejoran la interacción con clientes en todo momento.</p>
+                        <p class="text-gray-400 text-center">Sistemas inteligentes que ofrecen soporte continuo y mejoran la interacción con clientes en todo momento.</p>
                     </div>
                     <!-- Servicio 3 -->
                     <div class="card p-8 rounded-2xl flex flex-col items-center transition-transform hover:scale-105 fade-in-up" style="transition-delay: 0.2s;">
                         <svg class="w-16 h-16 text-inovixe-blue mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.114 5.636a9 9 0 010 12.728M16.463 8.288a5.25 5.25 0 010 7.424M6.75 8.25l4.72-4.72a.75.75 0 011.28.53v15.88a.75.75 0 01-1.28.53l-4.72-4.72H4.51c-.88 0-1.704-.507-1.938-1.354A9.01 9.01 0 012.25 12c0-.83.112-1.633.322-2.396C2.806 8.756 3.63 8.25 4.51 8.25H6.75z"></path></svg>
                         <h3 class="font-bold text-xl mb-2">Campañas en Meta y Publicidad Online</h3>
-                        <p class="text-gray-600 text-center">Campañas digitales precisas que generan tráfico cualificado y potencian la adquisición de clientes.</p>
+                        <p class="text-gray-400 text-center">Campañas digitales precisas que generan tráfico cualificado y potencian la adquisición de clientes.</p>
                     </div>
                     <!-- Servicio 4 -->
                     <div class="card p-8 rounded-2xl flex flex-col items-center transition-transform hover:scale-105 fade-in-up" style="transition-delay: 0.3s;">
                         <svg class="w-16 h-16 text-inovixe-blue mb-4" fill="none" stroke="currentColor" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1.5 1.5A.5.5 0 0 1 2 1h12a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.128.334L10 8.692V13.5a.5.5 0 0 1-.342.474l-3 1A.5.5 0 0 1 6 14.5V8.692L1.628 3.834A.5.5 0 0 1 1.5 3.5zm1 .5v1.308l4.372 4.858A.5.5 0 0 1 7 8.5v5.306l2-.666V8.5a.5.5 0 0 1 .128-.334L13.5 3.308V2z"></path></svg>
                         <h3 class="font-bold text-xl mb-2">Funnels de venta automatizados</h3>
-                        <p class="text-gray-600 text-center">Rutas de conversión inteligentes que convierten visitantes en clientes leales de manera automatizada.</p>
+                        <p class="text-gray-400 text-center">Rutas de conversión inteligentes que convierten visitantes en clientes leales de manera automatizada.</p>
                     </div>
                     <!-- Servicio 5 -->
                     <div class="card p-8 rounded-2xl flex flex-col items-center transition-transform hover:scale-105 fade-in-up" style="transition-delay: 0.5s;">
                         <svg class="w-16 h-16 text-inovixe-blue mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18v-5.25m0 0a6.01 6.01 0 001.5-.189m-1.5.189a6.01 6.01 0 01-1.5-.189m3.75 7.478a12.06 12.06 0 01-4.5 0m3.75 2.383a14.406 14.406 0 01-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 10-7.517 0c.85.493 1.509 1.333 1.509 2.316V18"></path></svg>
                         <h3 class="font-bold text-xl mb-2">Consultoría Empresarial</h3>
-                        <p class="text-gray-600 text-center">Asesoramiento experto en integración de IA para evaluar oportunidades y maximizar el retorno.</p>
+                        <p class="text-gray-400 text-center">Asesoramiento experto en integración de IA para evaluar oportunidades y maximizar el retorno.</p>
                     </div>
                 </div>
             </div>
@@ -264,24 +274,24 @@
         <section class="py-16 md:py-24 bg-black-transparent">
             <div class="container mx-auto px-6 text-center">
                 <h2 class="section-title text-center mb-12 fade-in-up">De Desafíos a Oportunidades</h2>
-                <p class="text-gray-600 text-lg max-w-3xl mx-auto mb-10 fade-in-up" style="transition-delay: 0.1s;">
+                <p class="text-gray-400 text-lg max-w-3xl mx-auto mb-10 fade-in-up" style="transition-delay: 0.1s;">
                     ¿Te enfrentas a techos de crecimiento o a la imposibilidad de estar disponible 24/7? En Inóvixe, transformamos estos retos en vías para un crecimiento ilimitado.
                 </p>
                 <div class="flex flex-col md:flex-row justify-center items-center gap-8 md:gap-16">
                     <div class="text-center fade-in-up" style="transition-delay: 0.2s;">
                         <svg class="w-24 h-24 text-inovixe-blue mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                         <h4 class="font-bold text-xl">Problema: Techo de Crecimiento</h4>
-                        <p class="text-gray-600 mt-2">Dependencia excesiva de recursos humanos.</p>
+                        <p class="text-gray-400 mt-2">Dependencia excesiva de recursos humanos.</p>
                     </div>
                     <div class="text-center fade-in-up" style="transition-delay: 0.4s;">
                         <svg class="w-24 h-24 text-inovixe-blue mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.25 18L9 11.25l4.306 4.307a11.95 11.95 0 015.814-5.519l2.74-1.22m0 0l-5.94-2.28m5.94 2.28l-2.28 5.941"></path></svg>
                         <h4 class="font-bold text-xl">Solución: Escala Ilimitada</h4>
-                        <p class="text-gray-600 mt-2">Herramientas de IA y asistentes virtuales para escalar sin límites.</p>
+                        <p class="text-gray-400 mt-2">Herramientas de IA y asistentes virtuales para escalar sin límites.</p>
                     </div>
                     <div class="text-center fade-in-up" style="transition-delay: 0.6s;">
                         <svg class="w-24 h-24 text-inovixe-blue mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                         <h4 class="font-bold text-xl">Resultado: Presencia Constante</h4>
-                        <p class="text-gray-600 mt-2">Estrategias de marketing y ventas que operan sin interrupciones.</p>
+                        <p class="text-gray-400 mt-2">Estrategias de marketing y ventas que operan sin interrupciones.</p>
                     </div>
                 </div>
             </div>
@@ -295,21 +305,21 @@
                     <!-- Testimonio 1 -->
                     <div class="card p-8 rounded-2xl flex flex-col items-center fade-in-up">
                         <img src="https://placehold.co/80x80/2b6cb0/ffffff?text=JP" alt="Foto de Juan Pérez" class="w-20 h-20 rounded-full mx-auto mb-4 border-2 border-inovixe-blue">
-                        <p class="italic text-gray-700 mb-4">"Inóvixe transformó mi negocio en meses. Su enfoque en la automatización con IA ha sido un cambio de juego para nosotros."</p>
+                        <p class="italic text-gray-300 mb-4">"Inóvixe transformó mi negocio en meses. Su enfoque en la automatización con IA ha sido un cambio de juego para nosotros."</p>
                         <p class="font-bold text-inovixe-blue">Juan Pérez</p>
                         <p class="text-sm text-gray-500">CEO, Tech Solutions</p>
                     </div>
                     <!-- Testimonio 2 -->
                     <div class="card p-8 rounded-2xl flex flex-col items-center fade-in-up" style="transition-delay: 0.1s;">
                         <img src="https://placehold.co/80x80/2b6cb0/ffffff?text=MA" alt="Foto de María Alva" class="w-20 h-20 rounded-full mx-auto mb-4 border-2 border-inovixe-blue">
-                        <p class="italic text-gray-700 mb-4">"Las campañas de publicidad en Meta que Inóvixe creó nos trajeron un retorno de inversión que superó todas nuestras expectativas. ¡Muy profesionales!"</p>
+                        <p class="italic text-gray-300 mb-4">"Las campañas de publicidad en Meta que Inóvixe creó nos trajeron un retorno de inversión que superó todas nuestras expectativas. ¡Muy profesionales!"</p>
                         <p class="font-bold text-inovixe-blue">María Alva</p>
                         <p class="text-sm text-gray-500">Fundadora, Marketing Pro</p>
                     </div>
                     <!-- Testimonio 3 -->
                     <div class="card p-8 rounded-2xl flex flex-col items-center fade-in-up" style="transition-delay: 0.2s;">
                         <img src="https://placehold.co/80x80/2b6cb0/ffffff?text=CA" alt="Foto de Carlos Gómez" class="w-20 h-20 rounded-full mx-auto mb-4 border-2 border-inovixe-blue">
-                        <p class="italic text-gray-700 mb-4">"Los agentes de WhatsApp que implementaron han agilizado nuestro servicio al cliente de manera increíble. Ahora operamos 24/7 sin esfuerzo."</p>
+                        <p class="italic text-gray-300 mb-4">"Los agentes de WhatsApp que implementaron han agilizado nuestro servicio al cliente de manera increíble. Ahora operamos 24/7 sin esfuerzo."</p>
                         <p class="font-bold text-inovixe-blue">Carlos Gómez</p>
                         <p class="text-sm text-gray-500">Gerente de Operaciones, Global Logistics</p>
                     </div>
@@ -328,7 +338,7 @@
                             <h4 class="font-bold text-lg text-inovixe-blue">¿Cuánto tiempo toma implementar una solución de IA?</h4>
                             <span class="text-inovixe-blue text-2xl font-bold">+</span>
                         </div>
-                        <p id="faq1" class="mt-2 text-gray-700 hidden">
+                        <p id="faq1" class="mt-2 text-gray-300 hidden">
                             El tiempo de implementación varía según la complejidad del proyecto, desde <strong>1 a 12 meses</strong>. Sin embargo, en nuestra primera llamada, te daremos un estimado claro y realista para tu caso particular.
                         </p>
                     </div>
@@ -338,7 +348,7 @@
                             <h4 class="font-bold text-lg text-inovixe-blue">¿Hay cláusulas de permanencia?</h4>
                             <span class="text-inovixe-blue text-2xl font-bold">+</span>
                         </div>
-                        <p id="faq2" class="mt-2 text-gray-700 hidden">
+                        <p id="faq2" class="mt-2 text-gray-300 hidden">
                             No. Confiamos en la calidad y los resultados de nuestro trabajo. No tenemos contratos de permanencia forzada, ya que creemos que nuestros resultados son la mejor forma de fidelizar a nuestros clientes.
                         </p>
                     </div>
@@ -348,7 +358,7 @@
                             <h4 class="font-bold text-lg text-inovixe-blue">¿Ofrecen servicios a nivel mundial?</h4>
                             <span class="text-inovixe-blue text-2xl font-bold">+</span>
                         </div>
-                        <p id="faq3" class="mt-2 text-gray-700 hidden">
+                        <p id="faq3" class="mt-2 text-gray-300 hidden">
                             ¡Sí! Nuestra agencia tiene alcance global. Operamos con clientes de todo el mundo y nos desplazamos a donde sea necesario para garantizar el éxito de nuestros proyectos.
                         </p>
                     </div>
@@ -358,7 +368,7 @@
                             <h4 class="font-bold text-lg text-inovixe-blue">¿Cómo empezamos a trabajar con Inóvixe?</h4>
                             <span class="text-inovixe-blue text-2xl font-bold">+</span>
                         </div>
-                        <p id="faq4" class="mt-2 text-gray-700 hidden">
+                        <p id="faq4" class="mt-2 text-gray-300 hidden">
                             Es muy fácil. Simplemente rellena el formulario de contacto más abajo para solicitar una consulta gratuita. Te garantizamos una llamada en menos de 60 minutos para discutir tus necesidades y cómo podemos ayudarte.
                         </p>
                     </div>
@@ -383,25 +393,25 @@
                 <h2 class="section-title text-center mb-12 fade-in-up">Contáctanos</h2>
                 <div class="flex flex-col items-center">
                     <h3 class="font-bold text-2xl mb-4 fade-in-up">Solicita una Consulta Gratuita</h3>
-                    <p class="text-center text-gray-600 mb-8 max-w-lg fade-in-up">
+                    <p class="text-center text-gray-400 mb-8 max-w-lg fade-in-up">
                         Envíanos un mensaje y te contactaremos en menos de 60 minutos para discutir cómo Inóvixe puede transformar tu negocio.
                     </p>
                     <form class="w-full max-w-md card p-8 rounded-2xl fade-in-up">
                         <div class="mb-4">
-                            <label for="name" class="block text-gray-700 font-semibold mb-2">Nombre</label>
-                            <input type="text" id="name" name="name" class="w-full px-4 py-2 border border-gray-300 rounded-xl bg-white text-black focus:outline-none focus:ring-2 focus:ring-inovixe-blue" placeholder="Tu Nombre" required>
+                            <label for="name" class="block text-gray-300 font-semibold mb-2">Nombre</label>
+                            <input type="text" id="name" name="name" class="w-full px-4 py-2 border border-gray-700 rounded-xl bg-gray-900 text-white focus:outline-none focus:ring-2 focus:ring-inovixe-blue" placeholder="Tu Nombre" required>
                         </div>
                         <div class="mb-4">
-                            <label for="email" class="block text-gray-700 font-semibold mb-2">Email</label>
-                            <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-xl bg-white text-black focus:outline-none focus:ring-2 focus:ring-inovixe-blue" placeholder="tu.email@ejemplo.com" required>
+                            <label for="email" class="block text-gray-300 font-semibold mb-2">Email</label>
+                            <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-gray-700 rounded-xl bg-gray-900 text-white focus:outline-none focus:ring-2 focus:ring-inovixe-blue" placeholder="tu.email@ejemplo.com" required>
                         </div>
                         <div class="mb-4">
-                            <label for="phone" class="block text-gray-700 font-semibold mb-2">Teléfono</label>
-                            <input type="tel" id="phone" name="phone" class="w-full px-4 py-2 border border-gray-300 rounded-xl bg-white text-black focus:outline-none focus:ring-2 focus:ring-inovixe-blue" placeholder="+34 123 456 789">
+                            <label for="phone" class="block text-gray-300 font-semibold mb-2">Teléfono</label>
+                            <input type="tel" id="phone" name="phone" class="w-full px-4 py-2 border border-gray-700 rounded-xl bg-gray-900 text-white focus:outline-none focus:ring-2 focus:ring-inovixe-blue" placeholder="+34 123 456 789">
                         </div>
                         <div class="mb-6">
-                            <label for="message" class="block text-gray-700 font-semibold mb-2">Mensaje</label>
-                            <textarea id="message" name="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-xl bg-white text-black focus:outline-none focus:ring-2 focus:ring-inovixe-blue" placeholder="Cuéntanos sobre tu proyecto..." required></textarea>
+                            <label for="message" class="block text-gray-300 font-semibold mb-2">Mensaje</label>
+                            <textarea id="message" name="message" rows="4" class="w-full px-4 py-2 border border-gray-700 rounded-xl bg-gray-900 text-white focus:outline-none focus:ring-2 focus:ring-inovixe-blue" placeholder="Cuéntanos sobre tu proyecto..." required></textarea>
                         </div>
                         <button type="submit" class="btn-cta bg-inovixe-blue text-white w-full">Enviar Mensaje</button>
                     </form>
@@ -411,17 +421,17 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-white/90 py-12 border-t border-gray-200">
+    <footer class="bg-black/90 py-12 border-t border-gray-800">
         <div class="container mx-auto px-6 text-center">
             <div class="flex justify-center mb-6">
                 <!-- Ícono de Instagram -->
-                <a href="#" class="text-black hover:text-inovixe-blue transition-colors mx-3" aria-label="Visítanos en Instagram">
+                <a href="#" class="text-white hover:text-inovixe-blue transition-colors mx-3" aria-label="Visítanos en Instagram">
                     <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <path d="M12 2.163c3.204 0 3.584.012 4.851.07 1.173.058 1.933.242 2.515.474.57.232 1.05.545 1.515 1.01s.783.945 1.01 1.515c.232.582.416 1.342.474 2.515.058 1.267.07 1.647.07 4.851s-.012 3.584-.07 4.851c-.058 1.173-.242 1.933-.474 2.515-.232.57-.545 1.05-1.01 1.515s-.945.783-1.515 1.01c-.582.232-1.342.416-2.515.474-1.267.058-1.647.07-4.851.07s-3.584-.012-4.851-.07c-1.173-.058-1.933-.242-2.515-.474-.57-.232-1.05-.545-1.515-1.01s-.783-.945-1.01-1.515c-.232-.582-.416-1.342-.474-2.515-.058-1.267-.07-1.647-.07-4.851s.012-3.584.07-4.851c.058-1.173.242-1.933.474-2.515.232-.57.545-1.05 1.01-1.515s.945-.783 1.515-1.01c.582-.232 1.342-.416 2.515-.474 1.267-.058 1.647-.07 4.851-.07zm0-1.803c-3.266 0-3.693.014-4.981.073-1.233.058-2.128.249-2.875.545-.747.296-1.396.7-2.035 1.334-.64.639-1.039 1.288-1.334 2.035-.296.747-.487 1.642-.545 2.875-.059 1.288-.073 1.715-.073 4.981s.014 3.693.073 4.981c.058 1.233.249 2.128.545 2.875.296.747.7 1.396 1.334 2.035.639.64 1.288 1.039 2.035 1.334.747.296 1.642.487 2.875.545 1.288.059 1.715.073 4.981.073s3.693-.014 4.981-.073c1.233-.058 2.128-.249 2.875-.545.747-.296 1.396-.7 2.035-1.334.639-.64 1.288-1.039 1.334-2.035.296-.747.487-1.642-.545-2.875-.059-1.288-.073-1.715-.073-4.981s-.014-3.693-.073-4.981c-.058-1.233-.249-2.128-.545-2.875-.296-.747-.7-1.396-1.334-2.035-.639-.64-1.288-1.039-2.035-1.334-.747-.296-1.642-.487-2.875-.545-1.288-.059-1.715-.073-4.981-.073zm0 4.107a5.834 5.834 0 100 11.667 5.834 5.834 0 000-11.667zm0 9.53a3.696 3.696 0 110-7.393 3.696 3.696 0 010 7.393zm6.545-9.613a1.455 1.455 0 100 2.91 1.455 1.455 0 000-2.91z"/>
                     </svg>
                 </a>
             </div>
-            <p class="text-gray-600">&copy; 2025 Inóvixe. Todos los derechos reservados.</p>
+            <p class="text-gray-400">&copy; 2025 Inóvixe. Todos los derechos reservados.</p>
         </div>
     </footer>
     
